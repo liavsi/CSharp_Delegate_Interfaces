@@ -5,70 +5,41 @@ using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
-    public class MenuItem
+    public abstract class MenuItem
     {
 
-        private string m_Title; 
-
-        private bool m_IsLeaf = false;
-
-        private List<MenuItem> m_SubMenu;
+        protected string m_Title;
 
         public event Action<MenuItem> Chose;
 
-        public void MainPorpuse()
+        public MenuItem(string i_Title)
         {
-            ShowMenu();
-            //todo int choise = AskForInput();
-            int choise = 1;
-            if (choise != 0)
-            {
-                m_SubMenu[choise].OnChose();
-            }
+            Title = i_Title;
+        }
+        public string Title
+        {
+            get { return m_Title; }
+            set { m_Title = value; }
         }
 
-        private void OnChose()
+        public abstract void MainPorpuse();
+
+
+        public void OnChose()
         {
-            if(Chose != null)
+            if (Chose != null)
             {
                 Chose.Invoke(this);
             }
         }
 
-        public void ShowMenu()
-        {
-            Console.WriteLine("**{0}**", Title);
-            Console.WriteLine("-------------");
-            int count = 1;
-            foreach(MenuItem item in m_SubMenu)
-            {
-                Console.WriteLine("{0} -> {1}", count, item.Title);
-                count++;
-            }
-        }
+
 
         public void MenuItem_Chose(MenuItem i_Invoker)
         {
             i_Invoker.MainPorpuse();
         }
 
-        public string Title
-        {
-            get { return m_Title; } set { m_Title = value; } 
-        }
 
-        public void AddSubMenu(MenuItem i_MenuItem)
-        {
-            if (m_SubMenu != null)
-            {
-                m_SubMenu.Add(i_MenuItem);
-            }
-            else
-            {
-                m_SubMenu = new List<MenuItem>();
-                m_SubMenu.Add(i_MenuItem);
-            }
-            i_MenuItem.Chose += new Action<MenuItem> (MenuItem_Chose);
-        }
     }
 }
