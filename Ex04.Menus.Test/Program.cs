@@ -11,7 +11,7 @@ namespace Ex04.Menus.Test
 
         public static void Main()
         {
-           SystemThatWorkWithMenu systemMenu = new SystemThatWorkWithMenu();
+            ActionSystemThatWorkWithMenu systemMenu = new ActionSystemThatWorkWithMenu();
             systemMenu.MenuItem.MainPorpuse();
         }
     }
