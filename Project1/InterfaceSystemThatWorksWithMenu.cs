@@ -7,9 +7,7 @@ namespace Ex04.Menus.Interfaces
 {
     public class InterfaceSystemThatWorksWithMenu : ILeafMenuListener
     {
-
         public MenuItem FirstMenuItem;
-
 
         public InterfaceSystemThatWorksWithMenu()
         {
@@ -38,7 +36,6 @@ namespace Ex04.Menus.Interfaces
             DelegatesMenu.AddSubMenu(showDateTime);
             DelegatesMenu.AddSubMenu(showVerionSpaces);
             FirstMenuItem = DelegatesMenu;
-
         }
         public void StartMenu()
         {

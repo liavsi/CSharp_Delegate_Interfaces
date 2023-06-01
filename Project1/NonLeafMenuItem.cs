@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Ex04.Menus.Interfaces
@@ -19,8 +18,7 @@ namespace Ex04.Menus.Interfaces
             while (!quit)
             {
                 showMenu();
-                //todo int choise = AskForInput();
-                int choise = int.Parse(Console.ReadLine());
+                int choise = askForInput(m_SubMenu.Count);
                 if (choise != 0)
                 {
                     m_SubMenu[choise - 1].OnNonLeafMenuAsked(m_SubMenu[choise - 1]);

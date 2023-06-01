@@ -21,8 +21,7 @@ namespace Ex04.Menus.Delegates
             while (!quit)
             {
                 showMenu();
-                //todo int choise = AskForInput();
-                int choise = int.Parse(Console.ReadLine());
+                int choise = askForInput(m_SubMenu.Count);
                 if (choise != 0)
                 {
                     m_SubMenu[choise - 1].OnChose();

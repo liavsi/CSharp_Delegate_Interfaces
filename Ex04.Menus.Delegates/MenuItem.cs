@@ -24,7 +24,6 @@ namespace Ex04.Menus.Delegates
 
         public abstract void MainPorpuse();
 
-
         public void OnChose()
         {
             if (Chose != null)
@@ -33,7 +32,29 @@ namespace Ex04.Menus.Delegates
             }
         }
 
+        public static int askForInput(int i_MaxVal)
+        {
+            bool validInput = false;
+            Console.WriteLine(@"Please Enter your input (1 to {0} or press '0' to Back).", i_MaxVal);
+            int resValue = 0;
+            while (!validInput)
+            {
+                if (int.TryParse(Console.ReadLine(), out resValue))
+                {
+                    validInput = true;
+                    if (resValue < 0 || resValue > i_MaxVal)
+                    {
+                        validInput = false;
+                    }
+                }
+                if (!validInput)
+                {
+                    Console.WriteLine("Invalid input.. Try Again");
+                }
+            }
 
+            return resValue;
+        }
 
         public void MenuItem_Chose(MenuItem i_Invoker)
         {
