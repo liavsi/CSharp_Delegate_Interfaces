@@ -39,6 +39,10 @@
       <Project>{c01e4f48-18ec-4de2-9ff0-ace21e7608ad}</Project>
       <Name>Ex04.Menus.Delegates</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Project1\Ex04.Menus.Interfaces.csproj">
+      <Project>{0fde9c0a-127e-4590-b199-c5dd9866c702}</Project>
+      <Name>Ex04.Menus.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,16 +1,14 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Ex04.Menus.Delegates
+namespace Ex04.Menus.Interfaces
 {
     internal class NonLeafMenuItem : MenuItem
     {
-
         protected List<MenuItem> m_SubMenu;
 
-        public NonLeafMenuItem(string i_Title) :base(i_Title)
+        public NonLeafMenuItem(string i_Title) : base(i_Title)
         {
 
         }
@@ -25,7 +23,7 @@ namespace Ex04.Menus.Delegates
                 int choise = int.Parse(Console.ReadLine());
                 if (choise != 0)
                 {
-                    m_SubMenu[choise - 1].OnChose();
+                    m_SubMenu[choise - 1].OnNonLeafMenuAsked(m_SubMenu[choise - 1]);
                 }
                 else
                 {
@@ -33,7 +31,6 @@ namespace Ex04.Menus.Delegates
                 }
             }
         }
-
 
         private void showMenu()
         {
@@ -58,7 +55,9 @@ namespace Ex04.Menus.Delegates
                 m_SubMenu = new List<MenuItem>();
                 m_SubMenu.Add(i_MenuItem);
             }
-            i_MenuItem.Chose += MenuItem_Chose;
+            i_MenuItem.SetMenuListener(this);
         }
+
+
     }
 }

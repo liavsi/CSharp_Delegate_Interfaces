@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using Ex04.Menus.Delegates;
+using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
@@ -11,8 +9,11 @@ namespace Ex04.Menus.Test
 
         public static void Main()
         {
-            ActionSystemThatWorkWithMenu systemMenu = new ActionSystemThatWorkWithMenu();
-            systemMenu.MenuItem.MainPorpuse();
+            ActionSystemThatWorkWithMenu systemMenuDelegate = new ActionSystemThatWorkWithMenu();
+            systemMenuDelegate.StartMenu();
+            InterfaceSystemThatWorksWithMenu systemMenuInterface = new InterfaceSystemThatWorksWithMenu();
+            systemMenuInterface.StartMenu();
+            
         }
     }
 }

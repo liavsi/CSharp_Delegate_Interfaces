@@ -8,7 +8,7 @@ namespace Ex04.Menus.Delegates
     public class ActionSystemThatWorkWithMenu
     {
         //public event Action ChoseMethod;
-        public MenuItem MenuItem;
+        public MenuItem FirstMenuItem;
 
         public ActionSystemThatWorkWithMenu()
         {
@@ -35,7 +35,12 @@ namespace Ex04.Menus.Delegates
             NonLeafMenuItem DelegatesMenu = new NonLeafMenuItem("Delegates Main Menu");
             DelegatesMenu.AddSubMenu(showDateTime);
             DelegatesMenu.AddSubMenu(showVerionSpaces);
-            MenuItem = DelegatesMenu;
+            FirstMenuItem = DelegatesMenu;
+        }
+
+        public void StartMenu()
+        {
+            FirstMenuItem.MainPorpuse();
         }
 
         public void PrintTodayDate()

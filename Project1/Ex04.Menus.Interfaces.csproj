@@ -36,6 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="InterfaceSystemThatWorksWithMenu.cs" />
+    <Compile Include="LeafMenuItem.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="NonLeafMenuItem.cs" />
+    <Compile Include="TodayDatePrinters.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
