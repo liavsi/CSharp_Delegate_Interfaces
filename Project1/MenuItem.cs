@@ -11,19 +11,21 @@ namespace Ex04.Menus.Interfaces
 
         protected string m_Title;
 
-
         public string Title
         {
             get { return m_Title; }
             set { m_Title = value; }
         }
 
-        public IMenuListener UpperMenu { get { return m_UpperMenu; } set { m_UpperMenu = value; } }
+        public IMenuListener UpperMenu
+        { 
+            get { return m_UpperMenu; }
+            set { m_UpperMenu = value; }
+        }
 
         public MenuItem(string i_Title)
         {
             Title = i_Title;
-
         }
 
         public abstract void MainPorpuse();
@@ -32,11 +34,10 @@ namespace Ex04.Menus.Interfaces
         {
             i_InnerMenu.MainPorpuse();
         }
+
         public void SetMenuListener(MenuItem i_Menu)
         {
             this.UpperMenu = i_Menu;
         }
-
-
     }
 }

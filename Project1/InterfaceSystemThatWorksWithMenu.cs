@@ -84,41 +84,21 @@ namespace Ex04.Menus.Interfaces
             return count;
         }
 
-        public void OnSpacesAsked()
-        {
-            PrintSpacesCounted();
-        }
-
-        public void OnDateAsked()
-        {
-            PrintTodayDate();
-        }
-
-        public void OnTimeAsked()
-        {
-            PrintTime();
-        }
-
-        public void VersionAsked()
-        {
-            PrintVersion();
-        }
-
         public void onLeafMenuAsked(string i_LeafTitle)
         {
             switch (i_LeafTitle)
             {
                 case "Version":
-                    VersionAsked();
+                    PrintVersion();
                     break;
                 case "Show Time":
-                    OnTimeAsked();
+                    PrintTime();
                     break ;
                 case "Show Date":
-                    OnDateAsked();
+                    PrintTodayDate();
                     break;
                 case "Count Spaces":
-                    OnSpacesAsked();
+                    PrintSpacesCounted();
                     break;
                 default:
                     break;
