@@ -61,7 +61,5 @@ namespace Ex04.Menus.Delegates
         {
             i_Invoker.MainPorpuse();
         }
-
-
     }
 }

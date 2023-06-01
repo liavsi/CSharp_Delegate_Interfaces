@@ -5,7 +5,6 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-
     public interface IMenuListener
     {
         void OnNonLeafMenuAsked(MenuItem i_InnerMenu);
@@ -15,6 +14,4 @@ namespace Ex04.Menus.Interfaces
     {
         void onLeafMenuAsked(string i_LeafTitle);
     }
-
-
 }

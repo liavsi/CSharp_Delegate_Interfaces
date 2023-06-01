@@ -7,7 +7,6 @@ namespace Ex04.Menus.Delegates
 {
     public class ActionSystemThatWorkWithMenu
     {
-        //public event Action ChoseMethod;
         public MenuItem FirstMenuItem;
 
         public ActionSystemThatWorkWithMenu()
