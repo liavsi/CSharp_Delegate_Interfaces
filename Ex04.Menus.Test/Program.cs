@@ -13,7 +13,6 @@ namespace Ex04.Menus.Test
             systemMenuDelegate.StartMenu();
             InterfaceSystemThatWorksWithMenu systemMenuInterface = new InterfaceSystemThatWorksWithMenu();
             systemMenuInterface.StartMenu();
-            
         }
     }
 }
