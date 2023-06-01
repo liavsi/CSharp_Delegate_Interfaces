@@ -43,6 +43,7 @@ namespace Ex04.Menus.Interfaces
         public static int askForInput(int i_MaxVal)
         {
             bool validInput = false;
+            Console.WriteLine("-------------");
             Console.WriteLine(@"Please Enter your input (1 to {0} or press '0' to Back).", i_MaxVal);
             int resValue = 0;
             while (!validInput)

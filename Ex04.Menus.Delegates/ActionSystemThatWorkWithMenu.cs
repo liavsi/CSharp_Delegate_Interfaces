@@ -43,31 +43,31 @@ namespace Ex04.Menus.Delegates
             FirstMenuItem.MainPorpuse();
         }
 
-        public void PrintTodayDate()
+        public static void PrintTodayDate()
         {
             DateTime todayDate = DateTime.Today;
-            Console.WriteLine("The Date is: {0}", todayDate.ToString());
+            Console.WriteLine(@"The Date is: {0}", todayDate.ToString("d"));
         }
 
-        public void PrintTime()
+        public static void PrintTime()
         {
             DateTime timeRightNow = DateTime.Now;
-            Console.WriteLine("The Hour is: {0}", timeRightNow.ToString());
+            Console.WriteLine(@"The Hour is: {0}", timeRightNow.ToString("T"));
         }
 
-        public void PrintVersion()
+        public static void PrintVersion()
         {
             Console.WriteLine("Version: 23.2.4.9805");
         }
 
-        public void PrintSpacesCounted()
+        public static void PrintSpacesCounted()
         {
             Console.WriteLine("Please Enter Your Sentence:");
             int count = countSpaces(Console.ReadLine());
             Console.WriteLine("There are {0} Spaces in Your Sentence", count);
         }
 
-        private int countSpaces(string i_Sentence)
+        private static int countSpaces(string i_Sentence)
         {
             int count = 0;
             foreach (char c in i_Sentence)
